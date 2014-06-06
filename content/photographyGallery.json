@@ -1,0 +1,75 @@
+[
+	{ 	"thumb": "media/photos/thumbs/1.jpg", 
+		"title": "Image Title", 
+		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"media": "media/photos/NiagraFalls-2x.jpg",
+		"retinaMedia": "media/photos/NiagraFalls-2x.jpg",
+		"mediaType": "image"
+	},
+	{ 	"thumb": "media/photos/thumbs/2.jpg", 
+		"title": "Image Title 2", 
+		"description": "Image 2 Description goes here! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"media": "media/photos/2.jpg",
+		"mediaType": "image"
+	},
+	{ 	"thumb": "media/photos/thumbs/3.jpg", 
+		"title": "Image Title 3", 
+		"description": "Image 3 Description goes here!",
+		"media": "media/photos/3.jpg",
+		"mediaType": "image"
+	},
+	{ 	"thumb": "media/photos/thumbs/4.jpg", 
+		"title": "Image Title 4", 
+		"description": "Image 4 Description goes here!",
+		"media": "media/photos/4.jpg",
+		"mediaType": "image"
+	},
+	{ 	"thumb": "media/photos/thumbs/1.jpg", 
+		"title": "Image Title", 
+		"description": "Image Description goes here!",
+		"media": "media/photos/1.jpg",
+		"mediaType": "image"
+	},
+	{ 	"thumb": "media/photos/thumbs/2.jpg", 
+		"title": "Image Title 2", 
+		"description": "Image 2 Description goes here!",
+		"media": "media/photos/2.jpg",
+		"mediaType": "image"
+	},
+	{ 	"thumb": "media/photos/thumbs/3.jpg", 
+		"title": "Image Title 3", 
+		"description": "Image 3 Description goes here!",
+		"media": "media/photos/3.jpg",
+		"mediaType": "image"
+	},
+	{ 	"thumb": "media/photos/thumbs/4.jpg", 
+		"title": "Image Title 4", 
+		"description": "Image 4 Description goes here!",
+		"media": "media/photos/4.jpg",
+		"mediaType": "image"
+	},
+	{ 	"thumb": "media/photos/thumbs/1.jpg", 
+		"title": "Image Title", 
+		"description": "Image Description goes here!",
+		"media": "media/photos/1.jpg",
+		"mediaType": "image"
+	},
+	{ 	"thumb": "media/photos/thumbs/2.jpg", 
+		"title": "Image Title 2", 
+		"description": "Image 2 Description goes here!",
+		"media": "media/photos/2.jpg",
+		"mediaType": "image"
+	},
+	{ 	"thumb": "media/photos/thumbs/3.jpg", 
+		"title": "Image Title 3", 
+		"description": "Image 3 Description goes here!",
+		"media": "media/photos/3.jpg",
+		"mediaType": "image"
+	},
+	{ 	"thumb": "media/photos/thumbs/4.jpg", 
+		"title": "Image Title 4", 
+		"description": "Image 4 Description goes here!",
+		"media": "media/photos/4.jpg",
+		"mediaType": "image"
+	}
+]

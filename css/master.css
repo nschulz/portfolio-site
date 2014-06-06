@@ -1,0 +1,586 @@
+/* @group Reset */
+
+html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, code,del, dfn, em, img, q, dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td {margin: 0;padding: 0;border: 0;font-weight: inherit;font-style: inherit;font-size: 100%;font-family: inherit;vertical-align: baseline;}body {line-height: 1.5;}/* Tables still need 'cellspacing="0"' in the markup. */table {border-collapse: separate;border-spacing: 0;}caption, th, td {text-align: left;font-weight: normal;}table, td, th {vertical-align: middle;}/* Remove possible quote marks (") from <q>, <blockquote>. */blockquote:before, blockquote:after, q:before, q:after {content: "";}blockquote, q {quotes: "" "";}/* Remove annoying border on linked images. */a img {border: none;}
+
+/* @end */
+
+/* @group Basics */
+html {
+	height: 100%;
+}
+* {
+	cursor: default;
+}
+.VButton {
+	cursor: pointer;
+}
+.VWindowTitleBarLabel {
+	display: none;
+}
+.center {
+	text-align: center;
+}
+h1 {
+	font-weight: bold;
+	color: #999;
+	text-shadow: 0 1px 0 #444;
+	padding: 12px auto 10px;
+}
+h2 {
+	font-weight: bold;
+	color: #369;
+	font-size: 14pt;
+	padding: 0 0;
+	border-bottom: 1px solid #ddd;
+	box-shadow: 0 1px 0 white;
+}
+h4 {
+	color: #555;
+	font-style: italic;
+	xtext-shadow: 0 1px 0 #333;
+}
+p {
+	padding: 5px 0 5px;
+}
+
+body {
+	background: black;
+	color: #ccc;
+	font-family: "HelveticaNeue", Sans-Serif;
+	height: 100%;
+	min-height: 704px;
+	-webkit-user-select: none;
+}
+
+/* @end */
+
+.NavContainer {
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+	color: #aaa;
+	font-family: "HelveticaNeue-CondensedBold", Sans-Serif;
+	overflow: hidden;
+	height: 182px;
+	width: 300px;
+	text-align: center;
+	padding-top: 60px;
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	z-index:10;
+	margin: -80px auto auto -150px;
+}
+.Navigation .VButton {
+	display: block;
+	height: 37px;
+	line-height: 37px;
+	border-bottom: 1px solid #f1f1f1;
+	-webkit-transition: color 0.3s ease-in-out;
+	-moz-transition: color 0.3s ease-in-out;
+}
+.Navigation .VButton:last-of-type {
+	border-bottom: none;
+}
+.Navigation .selected {
+	color: #fff;
+}
+.NavContainer.running {
+	background: #000 url(resources/navLight.png) no-repeat top center;
+}
+
+/* @group Theme */
+
+.VWindow {
+	border-radius: 0;
+	background: transparent;
+	box-shadow: none;
+}
+
+.VWindow .VWindowTitleBar {
+	border-radius: 0;
+	background: transparent;
+}
+.VWindow .VWindowCloseBtn {
+	display: none;
+}
+
+/* @end */
+
+.VAppWindow {
+	min-height: 704px;
+	min-width: 990px;
+}
+#logoIV {
+	width: 250px;
+	height: 54px;
+}
+#BackgroundContainer {
+	height: 100%;
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top:  0;
+	bottom: 0;
+}
+#BackgroundView {
+	background: url(resources/navLight.png) repeat-x top center,
+				url(resources/floorLighting4.png) repeat-x bottom center;
+	max-width: 1024px;
+	height: 100%;
+	margin: 0 auto;
+}
+.iPad #BackgroundView {
+	background-size: 270px, 800px;	
+}
+#Footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	text-align: center;
+	padding-bottom: 1px;
+	font-size: 9pt;
+	color: rgba(205,225,255,0.2);
+}
+
+/* @group Work */
+
+.DetailViewContainer {
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	right: 20px;
+	bottom: 146px;
+}
+.DetailViewContainer .DetailView {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+}
+.DetailViewContainer .MediaSpillContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom:  158px;
+	overflow: hidden;
+}
+.DetailViewContainer .DescriptionScrollView {
+	background-size: 100% 100%;
+	position: absolute;
+	height: 145px;
+	bottom: 0;
+	left: 20px;
+	right: 20px;
+}
+.DetailViewContainer .MediaSpillContainer .VImageView.MediaView,
+.DetailViewContainer .MediaSpillContainer .MediaView {
+	position: absolute;
+	top:  30px;
+	bottom: 20px;
+	right:  30px;
+	left: 30px;
+	-webkit-backface-visibility: hidden;
+	-webkit-box-reflect: below 2px -webkit-gradient(linear, left 0, left 1200, from(transparent), to(rgba(255,255,255,0.9)));
+}
+
+.DetailViewContainer .DetailView .TitleLabel {
+	color: #fff;
+	display: block;
+	z-index: 10;
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 22pt;
+	line-height: 18pt;
+	text-transform: uppercase;
+	top: auto;
+	bottom: 168px;
+	text-shadow: 0 1px 8px rgba(0,0,0,1),
+			 	0 1px 18px rgba(0,0,0,1);
+	-webkit-box-reflect: below 0px -webkit-gradient(linear, left 20%, left 100%, 
+													from(transparent), 
+													color-stop(0.4, rgba(0,0,0,0)),
+													to(rgba(255,255,255,0.3)));
+
+}
+#Work_Window .Shelf {
+	background: url(resources/glassShelf44.png) no-repeat center;
+	background-size: 100% 44px;
+	height: 44px;
+	position: absolute;
+	bottom: 290px;
+	left: 15px;
+	right: 15px;
+}
+#WorkThumbs {
+	position: absolute;
+	height: 140px;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	-webkit-mask: -webkit-gradient(linear, 93% top, right top,
+									from(rgba(255,255,255,1.0)),
+									to(rgba(255,255,255,0.0)))
+}
+#WorkThumbs .VTableViewCell {
+	height: 150px;
+	float: left;
+	width: 165px;
+}
+#WorkThumbs .VImageView {
+	border: 2px solid transparent;
+	height: 110px;
+	width: 155px;
+	margin: 5px;
+	-webkit-transition: border-color 0.3s ease-in-out;
+}
+#WorkThumbs .selected .VImageView {
+	border-color: #fff;
+}
+/* @end */
+
+/* @group Guide */
+
+#GuidePlayer {
+	background: #000;
+	width: 300px !important;
+	right: 0;
+	overflow: hidden;
+}
+#GuidePlayer .VMovieViewElement {
+	position: absolute;
+	right: 0;
+}
+/* @end */
+
+/* @group Experience */
+
+#ExperienceContent {
+	position: relative;
+	-webkit-mask: -webkit-gradient( linear, left 0%, left 100%,
+											from(rgba(255,255,255,0)),
+											color-stop(0.1, rgba(255,255,255,1.0)),
+											color-stop(0.995, rgba(255,255,255,1.0)),
+											to(rgba(255,255,255,0.0)))
+}
+#ExperienceContent .spacer {
+	height: 60px;
+}
+#ExperienceContent h1 {
+	background: url(resources/glassShelf44.png) no-repeat center;
+	background-size: auto 44px;
+	height: 40px;
+	color: #fff;
+	font-size: 20pt;
+	line-height: 10pt;
+	padding: 10px 0;
+	margin: 30px 0;
+}
+#ExperienceContent h1 span {
+	display: block;
+	line-height: 20px;
+	text-transform: uppercase;
+	margin-top: -8px;
+	-webkit-box-reflect: below 2px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.4, transparent), to(rgba(255,255,255,0.2)));
+}
+#ExperienceContent a.BigButton {
+	background: #ccc;
+	border-radius: 3px;
+	color: #333;
+	cursor: pointer;
+	display: block;
+	font-weight: bold;
+	float: left;
+	margin: 40px;
+	height: 37px;
+	padding: 0 30px;
+	line-height: 37px;
+	text-decoration: none;
+	text-shadow: 0 1px 0 white;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+#Experience_Window .event {
+	margin: 20px auto;
+	padding: 40px 40px 40px 200px;
+	width: 60%;
+	min-height: 130px;
+	position: relative;
+}
+.event .companyLogo {
+	position: absolute;
+	width: 120px;
+	left: 40px;
+	top:  48px;
+}
+.event #TMLogo {
+	width: 160px;
+	left: 20px;
+}
+.portfolioLeftCol {
+	float: left;
+	width: 47%;
+}
+
+.portfolioRightCol {
+	float: right;
+	width: 47%;
+}
+
+
+
+/* @group Writing */
+
+#writingSamples {
+	height: 170px;
+}
+#writingSamples h2 {
+	clear: both;
+	display: none;
+}
+.reportsContainer {
+	position: absolute;
+	left: 50px;
+	right: 20px;
+}
+.report {
+	background: url(../media/writing/ReportsTile.jpg) no-repeat top;
+	background-size: 750px;
+	color: #333;
+	text-decoration: none;
+	font-size: 10pt;
+	display: block;
+	width: 100px;
+	height: 148px;
+	margin: 0 10px;
+	text-align: center;
+	float: left;
+}
+.report:hover {
+	background-position: bottom;
+}
+.report > span {
+	display: block;
+	padding-top: 138px;
+}
+#bookGamow {
+	background-position: -375px 0;
+}
+#bookGamow:hover {
+	background-position: -375px -152px;
+}
+#bookFerris {
+	background-position: -500px 0;
+}
+#bookFerris:hover {
+	background-position: -500px -152px;
+}
+#formalComp {
+	background-position: -125px 0;
+}
+#formalComp:hover {
+	background-position: -125px -152px;
+}
+#formalQuantum {
+	background-position: -625px 0;
+}
+#formalQuantum:hover {
+	background-position: -625px -152px;
+}
+#labCI {
+	background-position: 0 0;
+}
+#labCI:hover {
+	background-position: 0 -152px;
+}
+#labGM {
+	background-position: -250px 0;
+}
+#labGM:hover {
+	background-position: -250px -152px;
+}
+
+/* @end */
+/* @end */
+
+/* @group Biography */
+.contentPlate,
+.event {
+	background: #111;
+	border: 1px solid #fff;
+	border-left-color: #cdcdcd;
+	border-right-color: #cdcdcd;
+	border-bottom-color: transparent;
+	border-radius: 8px;
+	color: #fff;
+	margin: 50px auto;
+	width: 640px;
+	padding: 10px 30px;
+	text-shadow: none;
+}
+.contentPlate,
+.event {
+	background: #eee;
+	background-image: -webkit-gradient( linear,
+							left top, left bottom,
+							from(#fff),
+							to(#eee));
+	background-image: -moz-linear-gradient( -90deg, #fff, #eee);
+	color: #333;
+}
+.event.shadow {
+	background: #f4f4f4 url(resources/glassShelfShadow.png) no-repeat center top;
+}
+
+.event.shadow.white {
+	background-color: #fff;
+}
+
+#Biography_Window_container {
+	position: relative;
+	height: 100%;
+}
+#Biography_Window .contentPlate {
+	top: 35%;
+	position: absolute;
+	left: 50%;
+	margin-top: -27%;
+	margin-left: -350px;
+}
+#BioAside {
+	float: left;
+	width: 240px;
+	height: 340px;
+	margin: 14px 25px 10px 0;
+}
+#BioAside .VButton {
+	display: inline-block;
+	text-align: center;
+	margin: 20px 16px;
+	background-size: 100% 100%;
+	height: 28px;
+	width: 28px;
+	line-height: 80px;
+	overflow: hidden;
+}
+#LinkedInBtn {
+	background: url(resources/ext-linkedin.png) no-repeat center;
+}
+#TwitterBtn {
+	background: url(resources/ext-twitter.png) no-repeat center;
+}
+#GoogleBtn {
+	background: url(resources/ext-google.png) no-repeat center;
+}
+#FacebookBtn {
+	background: url(resources/ext-facebook.png) no-repeat center;
+}
+
+#BioPhoto {
+	width: 240px;
+	height: 300px;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+#BioBlurb {
+}
+
+/* @end */
+
+/* @group Mailroom */
+.Mailroom {
+	top: 42%;
+	position: absolute;
+	left: 50%;
+	margin-top: -27%;
+	margin-left: -350px;
+}
+.Mailroom .envelope {
+	display: block;
+	margin: 100px auto;
+	text-align: center;
+}
+.Mailroom  label {
+	color: #888;
+	display: block;
+	font-weight: bold;
+	text-shadow: 0 1px 0 white;
+}
+.Mailroom .VTextFieldContainer,
+.Mailroom .VTextAreaContainer {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	height: 80px;
+	width: 100%;
+	margin: 10px 0;
+}
+.Mailroom .VTextAreaContainer {
+	height: 240px;
+}
+.Mailroom .VTextField,
+.Mailroom .VTextArea {
+	background: #eee;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.4),
+				 	0 1px 1px rgba(255,255,255,0.3);
+	border:0;
+	border-radius: 4px;
+	color:#333;
+	font-size: 14pt;
+	padding: 10px;
+	display: block;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 30px;
+	position: absolute;
+	-webkit-appearance: none;
+}
+.Mailroom .VTextField:focus,
+.Mailroom .VTextArea:focus {
+	background: #fff;
+}
+.Mailroom .VButton {
+	display: inline-block;
+	background: #aaa;
+	background-image: -webkit-gradient( linear,
+							left top, left bottom,
+							from(#fff),
+							to(#ccc));
+	border-radius: 3px;
+	color: #333;
+	font-weight: bold;
+	padding: 2px 24px;
+	line-height: 32px;
+	text-shadow: 0 1px 1px white;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.8),
+				inset 0 -1px 0 rgba(205,215,255,0.4),
+				inset 0 1px 0 rgba(205,215,255,0.3);
+
+}
+
+.Mailroom .VButton.Default {
+	background: #369;
+	background-image: -webkit-gradient( linear,
+							left top, left bottom,
+							from(#adf),
+							to(#7ac));
+	
+}
+
+/* @end */
+
+/* @group Overrides */
+
+.hasAction {
+	cursor: pointer;
+}
+
+.floatRight {
+	float: right;
+}
+/* @end */
